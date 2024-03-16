@@ -1,11 +1,11 @@
 export const siteConfig = {
-    name: "Dev Dictionary",
+    name: "Next blog boilerplate",
     url: "",
-    description: "",
+    description: "A minimal boilerplate to move fast with blogging in NextJs",
     author: "Swastik Yadav",
     links: {
-        twitter: "",
-        github: "",
+        twitter: "https://twitter.com/swastikb380",
+        github: "https://github.com/swastikyadav",
         personalSite: "https://swastikyadav.com",
     }
 };
