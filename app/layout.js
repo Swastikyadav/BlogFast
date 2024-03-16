@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+
+import { SiteHeader } from "@/components/site-header";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -15,7 +18,12 @@ export default function RootLayout({ children }) {
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
         inter.variable
-      )}>{children}</body>
+      )}>
+        <div className="relative flex min-h-dvh flex-col bg-background">
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
