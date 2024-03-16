@@ -1,4 +1,7 @@
 import { defineConfig, defineCollection, s } from "velite";
+import rehypeSlug from "rehype-slug";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 const computedFields = (data) => ({
     ...data,
@@ -30,7 +33,20 @@ export default defineConfig({
     },
     collections: { posts },
     mdx: {
-        rehypePlugins: [],
+        rehypePlugins: [
+            rehypeSlug,
+            [rehypePrettyCode, {theme: "github-dark"}],
+            [
+                rehypeAutolinkHeadings,
+                {
+                    behaviour: "wrap",
+                    properties: {
+                        className: ["subheading-anchor"],
+                        ariaLabel: "Link to section",
+                    },
+                },
+            ],
+        ],
         remarkPlugins: [],
     }
 });

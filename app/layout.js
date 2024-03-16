@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-pt-[3.5rem]">
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",
         inter.variable

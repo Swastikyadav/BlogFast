@@ -2,6 +2,8 @@ import { posts } from "#site/content";
 import { MDXContent } from "@/components/mdx-components";
 import { notFound } from "next/navigation";
 
+import "@/styles/mdx.css";
+
 async function getPostFromParams(params) {
     const slug = params?.slug?.join("/");
     const post = posts.find(post => post.slugAsParams === slug);
