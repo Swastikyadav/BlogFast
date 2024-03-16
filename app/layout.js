@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import { SiteHeader } from "@/components/site-header";
+import { Providers } from "@/components/providers";
 
 import "./globals.css";
 
@@ -19,10 +20,12 @@ export default function RootLayout({ children }) {
         "min-h-screen bg-background font-sans antialiased",
         inter.variable
       )}>
-        <div className="relative flex min-h-dvh flex-col bg-background">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-        </div>
+        <Providers>
+          <div className="relative flex min-h-dvh flex-col bg-background">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

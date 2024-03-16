@@ -4,6 +4,7 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { Icons } from "./icons";
 // import { MainNav } from "./main-nav";
+import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   return (
@@ -12,6 +13,7 @@ export function SiteHeader() {
         {/* <MainNav /> */}
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
+            <ModeToggle />
             <Link
               href={siteConfig.links.github}
               target="_blank"
