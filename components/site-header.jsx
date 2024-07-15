@@ -8,9 +8,9 @@ import { ModeToggle } from "./mode-toggle";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+      <div className="container flex items-center h-14 max-w-screen-2xl">
         <Link href="/">BlogFast</Link>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex items-center justify-end flex-1 space-x-2">
           <nav className="flex items-center">
             <ModeToggle />
             <Link
@@ -24,7 +24,7 @@ export function SiteHeader() {
                   "w-10 px-0"
                 )}
               >
-                <Icons.gitHub className="h-4 w-4" />
+                <Icons.gitHub className="w-4 h-4" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -39,7 +39,7 @@ export function SiteHeader() {
                   "w-10 px-0"
                 )}
               >
-                <Icons.twitter className="h-4 w-4" />
+                <Icons.twitter className="w-4 h-4" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
