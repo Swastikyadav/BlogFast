@@ -68,7 +68,9 @@ export function Minimalist() {
               <span className="flex items-center text-lg font-semibold">
                 {/* <Icons.github className="w-4 h-4" />{" "} */}
                 <Image src={project.logo} width={20} height={20} />
-                <span className="mx-2">{project.name}</span>
+                <Link href={project.url} target="_blank" className="mx-2">
+                  {project.name}
+                </Link>
                 <span
                   className={`w-2 h-2 rounded-full ${
                     project.isActive ? "bg-green-600" : "bg-red-600"
