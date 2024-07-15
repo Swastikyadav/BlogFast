@@ -16,7 +16,7 @@ export function Minimalist() {
   return (
     <div className="container max-w-3xl">
       {/* Profile */}
-      <div className="flex items-center justify-between my-16">
+      <div className="flex flex-col-reverse my-16 sm:flex-row sm:justify-between sm:items-center">
         <section>
           <div className="grid grid-cols-1 gap-1">
             <h1 className="text-2xl font-bold">{siteConfig.author}</h1>
@@ -62,7 +62,7 @@ export function Minimalist() {
       {/* Projects */}
       <div className="grid grid-cols-1 gap-2 my-12">
         <h1 className="text-2xl font-bold">Projects</h1>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {siteConfig.projects.map((project) => (
             <section className="p-2 border rounded-lg">
               <span className="flex items-center text-lg font-semibold">
